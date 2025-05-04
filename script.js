@@ -6,7 +6,9 @@ const chatBotToggle = document.querySelector("#chat-toggle");
 const closeChatBot = document.querySelector("#close-chat");
 
 // Configuração da API (modelo Gemini)
-const API_KEY = "AIzaSyDCbWQCkpnHbR3e2ZtkhRQYKY5w3vjAqVI"; // ← Substituir  
+// Assume que API_KEY foi definida no .env.js
+//console.log("Chave:", API_KEY); // só pra teste
+//const API_KEY = "SUA CHAVE AQUI"; // ← Substituir  
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
 
 // Objeto para armazenar a mensagem do usuário
