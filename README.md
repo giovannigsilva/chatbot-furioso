@@ -40,7 +40,7 @@ Acesso via link: ([ChatFurioso](https://chatbotfurioso.netlify.app)).
 1. Clone o repositório:
 
 bash
-git clone https://github.com/seu-usuario/chat-furioso.git  
+git clone https://github.com/giovannigsilva/chatbot-furioso
 Abra o arquivo index.html no navegador depois de alterar com a sua CHAVE API GEMINI.
 
 ## 🖥️ Estrutura dos Arquivos
