@@ -41,7 +41,7 @@ Acesso via link: ([ChatFurioso](https://chatbotfurioso.netlify.app)).
 
 bash
 git clone https://github.com/seu-usuario/chat-furioso.git  
-Abra o arquivo index.html no navegador.
+Abra o arquivo index.html no navegador depois de alterar com a sua CHAVE API GEMINI.
 
 ## 🖥️ Estrutura dos Arquivos
 chat-furioso/  
@@ -53,6 +53,5 @@ Chave API pública: Não expor a chave em produção!
 Dados offline: O chatbot depende da API Gemini para respostas atualizadas.
 
 🔗 Link do Projeto: ([GitHub Repo](https://github.com/giovannigsilva/chatbot-furioso)).
-
 
 Feito com 💜 por Giovanni Silva
