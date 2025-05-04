@@ -34,7 +34,7 @@ Um chatbot temático da FURIA Esports integrado com a API do Gemini (Google AI) 
 
 ## 🚀 Como Usar:
 ## ▶️ Online (Recomendado)
-Acesso via link: ([ChatFurioso](https://seusite.com/chat-furioso)).
+Acesso via link: ([ChatFurioso](https://chatbotfurioso.netlify.app)).
 
 ## ▶️ Localmente
 1. Clone o repositório:
@@ -52,7 +52,7 @@ chat-furioso/
 Chave API pública: Não expor a chave em produção!
 Dados offline: O chatbot depende da API Gemini para respostas atualizadas.
 
-🔗 Link do Projeto: ([GitHub Repo](https://seusite.com/chat-furioso)).
+🔗 Link do Projeto: ([GitHub Repo](https://github.com/giovannigsilva/chatbot-furioso)).
 
 
 Feito com 💜 por Giovanni Silva
