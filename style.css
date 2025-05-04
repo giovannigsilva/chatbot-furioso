@@ -60,7 +60,11 @@ body.show-chat #chat-toggle span:last-child {
     transform-origin: bottom right;
     pointer-events: none;
     box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0,0,0,0.5); 
-    transition: all 0.1s ease
+    transition: all 0.1s ease;
+    display: flex;
+    flex-direction: column;
+    max-height: 80vh;
+    height: auto;
 }
 
 body.show-chat .chatbot-popup {
@@ -111,12 +115,14 @@ body.show-chat .chatbot-popup {
 }
 
 .chat-body {
-    padding: 25px 22px;
+    flex: 1;
+    padding: 20px 22px;
+    overflow-y: auto;
     display: flex;
     gap: 20px;
-    height: 460px;
-    margin-bottom: 82px;
-    overflow-y: auto;
+    /* height: 460px;     */
+    /* margin-bottom: 82px; */
+    min-height: 200px;
     flex-direction: column;
     scrollbar-width: thin;
     scrollbar-color: #ccccf5 transparent;
@@ -201,7 +207,7 @@ body.show-chat .chatbot-popup {
 }
 
 .chat-footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     background: #FFF;
@@ -289,67 +295,142 @@ body.show-emoji em-emoji-picker{
     visibility: visible;
 }
 
-/* Responsividade para mobile  */
+/* Adicione estas media queries ao final do seu CSS */
+
 @media (max-width: 520px) {
-  #chat-toggle {
-    right: 20px;
-    bottom: 20px;
-  }
-
-  .chatbot-popup {
-    right: 0;
-    bottom: 0;
-    height: 100%dvh;
-    border-radius: 0;
-    width: 100%;
-  }
-
-  .chatbot-popup .chat-header {
-    padding: 12px 15px;
-  }
-
-  .chat-body {
-    height: calc(90% - 55px); 
-    padding: 25px 15px;
-  }
-
-  .chat-footer {
-    padding: 10px 15px 15px;
-  }
-}
-
-/* Tablets */
-@media (min-width: 521px) and (max-width: 768px) {
     .chatbot-popup {
-            width: 90%;
-            height: 80%;
-            right: 5%;
-            bottom: 5%;
-            border-radius: 12px;
-    }
-}
-
-/* Notebooks pequenos */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .chatbot-popup {
-        width: 400px;
-        height: 80vh;
-        max-height: 600px;
-        right: 30px;
-        bottom: 30px;
-        border-radius: 15px;
+        width: calc(100% - 40px);
+        right: 20px;
+        bottom: 70px;
+        max-height: 70vh;
     }
 
     .chat-body {
-        height: calc(80vh - 150px);
+        height: calc(70vh - 120px);
+        margin-bottom: 72px;
+        padding: 15px;
+    }
+
+    .chat-footer {
+        padding: 10px 15px 15px;
+    }
+
+    .message-input {
+        font-size: 0.9rem;
+    }
+
+    #chat-toggle {
+        bottom: 20px;
+        right: 20px;
     }
 }
 
-/* Telas maiores */
+@media (min-width: 521px) and (max-width: 768px) {
+    .chatbot-popup {
+        width: 380px;
+        max-height: 75vh;
+    }
+
+    .chat-body {
+        height: calc(75vh - 120px);
+        margin-bottom: 82px;
+    }
+
+    .chat-body .message .message-text {
+        max-width: 85%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .chatbot-popup {
+        width: 400px;
+        max-height: 80vh;
+    }
+
+    .chat-body {
+        height: calc(80vh - 120px);
+    }
+
+    .chat-body .message .message-text {
+        max-width: 80%;
+    }
+}
+
+/* MEDIA QUERY ESPECÍFICA PARA NOTEBOOK */
+@media (min-width: 1024px) and (max-height: 800px) {
+    .chatbot-popup {
+        max-height: 65vh;
+        bottom: 80px;
+    }
+
+    .chat-body {
+        padding: 20px;
+    }
+
+    body {
+        background: linear-gradient(#e6e6fa, #7d9eb7) no-repeat fixed;
+    }
+}
+
+/* MELHORIAS PARA O SCROLL */
+.chat-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+    background-color: #707ce7;
+    border-radius: 4px;
+}
+
+.chat-body::-webkit-scrollbar-track {
+    background: #f1f1ff;
+}
+
 @media (min-width: 1025px) {
     .chatbot-popup {
         width: 420px;
-        height: 70vh;
-        max-height: 650px;
+        max-height: 80vh;
     }
+
+    .chat-body {
+        height: 460px;
+    }
+}
+
+/* Ajustes adicionais para o scroll e mensagens */
+.chat-body {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #ccccf5 transparent;
+}
+
+.chat-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+    background-color: #ccccf5;
+    border-radius: 3px;
+}
+
+.chat-form .message-input {
+    scrollbar-width: thin;
+    scrollbar-color: #ccccf5 transparent;
+}
+
+.chat-form .message-input::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-form .message-input::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.chat-form .message-input::-webkit-scrollbar-thumb {
+    background-color: #ccccf5;
+    border-radius: 3px;
 }
